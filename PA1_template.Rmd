@@ -100,10 +100,8 @@ data_merge[is.na(data_merge[,2]),2] = data_merge[is.na(data_merge[,2]),4]
 ```{r}
 #total number of steps taken each day
 data_merge_sum = aggregate(steps.x ~ date, FUN=sum, data=data_merge)
-```
-  
 hist(data_merge_sum$steps.x,xlab="Number of Steps", main="Total Number of Steps Taken Each Day")
-
+```
 #Calculate and report the mean and median total number of steps taken per day
 merge_mean = mean(data_merge_sum)
 print(merge_mean)
